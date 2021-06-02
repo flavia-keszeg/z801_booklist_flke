@@ -1,0 +1,67 @@
+<mvc:View
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+        xmlns:smartTable="sap.ui.comp.smarttable"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+        controllerName="org.ubb.books.controller.CheckoutBookTable"
+        height="100%">
+
+    <Table id="checkoutBookTable"
+           items="{
+			path: '/Checkouts',
+			sorter: {
+				path: 'Title'
+			}
+		}"
+           growing="true"
+           growingThreshold="10"
+    >
+
+        <columns>
+            <Column>
+                <Text text="{i18n>checkoutId}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>isbn}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>title}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>author}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>firstname}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>lastname}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>checkoutDate}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>returnDate}"/>
+            </Column>
+            <Column>
+                <Text text="{i18n>username}"/>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{CheckoutId}"/>
+                    <Text text="{Isbn}"/>
+                    <Text text="{Title}"/>
+                    <Text text="{Author}"/>
+                    <Text text="{FirstName}"/>
+                    <Text text="{LastName}"/>
+                    <Text text="{CheckoutDate}"/>
+                    <Text text="{ReturnDate}"/>
+                    <Text text="{Username}"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>
